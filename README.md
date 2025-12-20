@@ -1,0 +1,1 @@
+# paris.ww2.medal.load
