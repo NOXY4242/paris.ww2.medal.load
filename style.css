@@ -35,8 +35,46 @@ html, body {
     text-align: center;
 }
 
+/* Slideshow container */
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 2s ease-in-out;
+    filter: brightness(40%);
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slideshow::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("img/grain.png");
+    opacity: 0.15;
+    pointer-events: none;
+}
 
 
+
+@keyframes zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
 
 
 /* Astuces */
