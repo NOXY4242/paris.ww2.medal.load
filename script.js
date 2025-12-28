@@ -48,3 +48,13 @@ audio.addEventListener("ended", () => {
 });
 
 playTrack();
+
+// SLIDESHOW
+const slides = document.querySelectorAll(".slide");
+let slideIndex = 0;
+
+setInterval(() => {
+    slides[slideIndex].classList.remove("active");
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add("active");
+}, 8000); // 8 secondes par image
