@@ -39,7 +39,7 @@ function playTrack() {
     audio.src = tracks[trackIndex].file;
     musicName.textContent = tracks[trackIndex].name;
     audio.play();
-    audio.volume = 0.25; // 25% (idéal pour un loading screen)
+    audio.volume = 0.07; // 25% (idéal pour un loading screen)
 }
 
 audio.addEventListener("ended", () => {
